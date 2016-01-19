@@ -48,7 +48,7 @@ class Manage_Pegawai extends CMS_Priv_Strict_Controller {
 		
 
         // displayed columns on list
-        $crud->columns('nama_kar','tgl_lahir','jk','stt_pegawai','nik','tgl_mulai_kerja','pangkat','tmt_pangkat','jabatan','gaji');
+        $crud->columns('nama_kar','tgl_lahir','jk','stt_pegawai','nik','tgl_mulai_kerja','pangkat','tmt_pangkat','jabatan');
         // displayed columns on edit operation
         $crud->edit_fields('nama_kar','tempat_lahir','tgl_lahir','jk','stt_pegawai','nik','tgl_mulai_kerja','pangkat','tmt_pangkat','jabatan','peny_ijazah','gaji_lama', 'gaji_baru', 'id_gaji', 'gaji','beasiswa','lama_studi','rekomendasi');
         // displayed columns on add operation
@@ -99,7 +99,7 @@ class Manage_Pegawai extends CMS_Priv_Strict_Controller {
         $crud->callback_before_insert(array($this,'before_insert'));
 		$crud->callback_before_update(array($this,'before_update'));
 		$crud->callback_before_delete(array($this,'before_delete'));
-		$crud->callback_after_insert(array($this,'after_insert'));
+		//$crud->callback_after_insert(array($this,'after_insert'));
 		$crud->callback_after_update(array($this,'after_update'));
 		$crud->callback_after_delete(array($this,'after_delete'));
 
@@ -330,7 +330,7 @@ class Manage_Pegawai extends CMS_Priv_Strict_Controller {
 	}
 
 	public function after_insert($post_array, $primary_key){
-		$now = date(Y-m-d);
+		$now = date('Y-m-d');
 		$year = date('Y');
 		$jlh = $this->db->count_all('cms_sp_mas_pangkat');
 		$nama_ev_pangkat = 'ev_pangkat_'.$primary_key;
@@ -343,51 +343,8 @@ class Manage_Pegawai extends CMS_Priv_Strict_Controller {
 		$lama_studi = $post_array['lama_studi'];
 		$rekomendasi = $post_array['rekomendasi'];
 		$pangkat_baru = $post_array['pangkat'];
-		/////////////////////////Pemotongan/////////////////////////////////
-		$date1 = new DateTime('NOW');
-		$date2 = new DateTime($post_array['tgl_mulai_kerja']);
-        $interval = date_diff($date1, $date2);
-		if($rekomendasi == '1'){
-			$konsekwensi = (2 * $lama_studi) + 1 + (4 - ($interval->y));
-		}elseif($rekomendasi == '2'){
-			$konsekwensi = (2 * $lama_studi) + 1 + (3 - ($interval->y));
-		}elseif($rekomendasi == '3'){
-			$konsekwensi = (2 * $lama_studi) + 1;
-		}else{
-			$konsekwensi = 0;
-		}
-		/////////////////////////End Of Pemotongan/////////////////////////////////
-		/////////////////////////Lama Kerja/////////////////////////////////
-        $interval = date_diff($date1, $date2);
-        /////////////////////////End Of Lama Kerja/////////////////////////////////
-        /////////////////////////Gaji dan Pangkat/////////////////////////////////
-        $tmk = new DateTime($post_array['tgl_mulai_kerja']);
-        $explode_tmk = explode('/',$post_array['tgl_mulai_kerja']);
-        $st =  date_diff($date1, $tmk);
-        $explode_now = explode('-',date(Y-m-d));
-        if(($st->y) >= 4){
-        	$mod = ($st->y) % 4;
-        	$wkp = (date('Y') + $mod).'-'.$explode_tmk[1].'-'.$explode_tmk[0];
-        }else{
-        	$wkp = ($explode_tmk[2] + 4).'-'.$explode_tmk[1].'-'.$explode_tmk[0];
-        }
-        if(($st->y) >= 2){
-        	$mod = ($st->y) % 2;
-        	$wkg = (date('Y') + $mod).'-'.$explode_tmk[1].'-'.$explode_tmk[0];
-        }else{
-        	$wkg = ($explode_tmk[2] + 2).'-'.$explode_tmk[1].'-'.$explode_tmk[0];
-        }
-        /////////////////////////End Of Gaji dan Pangkat/////////////////////////////////
 
-		$q_update_sampai_pangkat = "UPDATE cms_sp_pegawai
-									SET tgl_sd_pangkat = tmt_pangkat + INTERVAL 4 YEAR
-									WHERE id_pegawai = '".$primary_key."' AND pangkat < '".$jlh."'";
-		$q_update_gaji = "UPDATE cms_sp_pegawai, cms_sp_mas_gaji
-						  SET cms_sp_pegawai.gaji_baru = cms_sp_mas_gaji.gaji, cms_sp_pegawai.gaji_lama = cms_sp_mas_gaji.gaji ,
-						  	  cms_sp_pegawai.gaji = cms_sp_mas_gaji.gaji
-						  WHERE cms_sp_pegawai.id_pegawai = '".$primary_key."'
-						  AND cms_sp_pegawai.id_gaji = cms_sp_mas_gaji.id_mas_gaji";
-		$pangkat = array(
+		/*$pangkat = array(
         "fk_id_pegawai" => $primary_key,
         "nama_event" => 'Naik Pangkat',
         "tanggal" => $wkp,
@@ -405,7 +362,7 @@ class Manage_Pegawai extends CMS_Priv_Strict_Controller {
 		$this->db->query($q_update_gaji);
 		$this->db->insert($this->cms_complete_table_name('event'),$pangkat);
         $this->db->insert($this->cms_complete_table_name('event'),$gaji);
-		$this->db->trans_complete();
+		$this->db->trans_complete();*/
 		return TRUE;
 	}
 
@@ -429,69 +386,8 @@ class Manage_Pegawai extends CMS_Priv_Strict_Controller {
 		$lama_studi = $post_array['lama_studi'];
 		$rekomendasi = $post_array['rekomendasi'];
 		$pangkat_baru = $post_array['pangkat'];
-		/////////////////////////Pemotongan/////////////////////////////////
-		$date1 = new DateTime('NOW');
-		$date2 = new DateTime($post_array['tgl_mulai_kerja']);
-        $interval = date_diff($date1, $date2);
-		if($rekomendasi == '1'){
-			$konsekwensi = (2 * $lama_studi) + 1 + (4 - ($interval->y));
-		}elseif($rekomendasi == '2'){
-			$konsekwensi = (2 * $lama_studi) + 1 + (3 - ($interval->y));
-		}elseif($rekomendasi == '3'){
-			$konsekwensi = (2 * $lama_studi) + 1;
-		}else{
-			$konsekwensi = 0;
-		}
-		/////////////////////////End Of Pemotongan/////////////////////////////////
-		/////////////////////////Lama Kerja/////////////////////////////////
-        $interval = date_diff($date1, $date2);
-        /////////////////////////End Of Lama Kerja/////////////////////////////////
-        /////////////////////////Gaji dan Pangkat/////////////////////////////////
-        $tmk = new DateTime($post_array['tgl_mulai_kerja']);
-        $explode_tmk = explode('/',$post_array['tgl_mulai_kerja']);
-        $st =  date_diff($date1, $tmk);
-        $explode_now = explode('-',date(Y-m-d));
-        if(($st->y) >= 4){
-        	$mod = ($st->y) % 4;
-        	$wkp = (date('Y') + $mod).'-'.$explode_tmk[1].'-'.$explode_tmk[0];
-        }else{
-        	$wkp = ($explode_tmk[2] + 4).'-'.$explode_tmk[1].'-'.$explode_tmk[0];
-        }
-        if(($st->y) >= 2){
-        	$mod = ($st->y) % 2;
-        	$wkg = (date('Y') + $mod).'-'.$explode_tmk[1].'-'.$explode_tmk[0];
-        }else{
-        	$wkg = ($explode_tmk[2] + 2).'-'.$explode_tmk[1].'-'.$explode_tmk[0];
-        }
-        /////////////////////////End Of Gaji dan Pangkat/////////////////////////////////
-
-		$q_update_sampai_pangkat = "UPDATE cms_sp_pegawai
-									SET tgl_sd_pangkat = tmt_pangkat + INTERVAL 4 YEAR
-									WHERE id_pegawai = '".$primary_key."' AND pangkat < '".$jlh."'";
-		$q_update_gaji = "UPDATE cms_sp_pegawai, cms_sp_mas_gaji
-						  SET cms_sp_pegawai.gaji_baru = cms_sp_mas_gaji.gaji, cms_sp_pegawai.gaji_lama = cms_sp_mas_gaji.gaji ,
-						  	  cms_sp_pegawai.gaji = cms_sp_mas_gaji.gaji
-						  WHERE cms_sp_pegawai.id_pegawai = '".$primary_key."'
-						  AND cms_sp_pegawai.id_gaji = cms_sp_mas_gaji.id_mas_gaji";
-		$pangkat = array(
-        "fk_id_pegawai" => $primary_key,
-        "nama_event" => 'Naik Pangkat',
-        "tanggal" => $wkp,
-        "pangkat_baru" => $pangkat_baru + 1
-        );
-        $gaji = array(
-        "fk_id_pegawai" => $primary_key,
-        "nama_event" => 'Naik Gaji',
-        "tanggal" => $wkg,
-        "pangkat_baru" => $pangkat_baru + 1
-        );
-
-		$this->db->trans_start();
-        $this->db->update($this->cms_complete_table_name('event'),$pangkat,array("fk_id_pegawai" => $primary_key));
-        $this->db->update($this->cms_complete_table_name('event'),$gaji,array("fk_id_pegawai" => $primary_key));
-		$this->db->query($q_update_sampai_pangkat);
-		$this->db->query($q_update_gaji);
-		$this->db->trans_complete();
+		
+		
 		return TRUE;
 	}
 
@@ -501,7 +397,7 @@ class Manage_Pegawai extends CMS_Priv_Strict_Controller {
 	}
 
 	public function after_delete($primary_key){
-		$event_p = 'ev_pangkat_'.$primary_key;
+		/*$event_p = 'ev_pangkat_'.$primary_key;
 		$event_g = 'ev_gaji_'.$primary_key;
 		$del_pang = "DROP EVENT $event_p";
 		$del_gaji = "DROP EVENT $event_g";
@@ -510,7 +406,7 @@ class Manage_Pegawai extends CMS_Priv_Strict_Controller {
 		$this->db->delete('cms_sp_lampiran', array('fk_id_pegawai' => $primary_key)); 
 		$this->db->delete('cms_sp_event', array('fk_id_pegawai' => $primary_key)); 
 		$this->db->query($del_pang);
-		$this->db->query($del_gaji);
+		$this->db->query($del_gaji);*/
 		return TRUE;
 	}
 	public function cc_umur($value, $row){

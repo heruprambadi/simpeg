@@ -11,17 +11,16 @@ class Event extends CMS_Controller {
 
 	public function index(){
 		$this->load->helper('date');
-		$datestring = date('Y-m-d');
-		$datestring2 = date('Y-m-d', strtotime($datestring. ' + 2 days'));
-		$data = $this->db->where('tanggal >=', $datestring)
-						 ->where('tanggal <=', $datestring2)
-						 ->join('cms_sp_pegawai','id_pegawai=fk_id_pegawai','left')
-						 ->order_by('tanggal')
-						 ->get('cms_sp_event')->result();
+		$year = date('Y');
+		$dari = date('Y-m-d');
+		$sampai = date('Y-m-d', strtotime($dari. ' - 7 days'));
+		$data = $this->db->select('nama_kar, (tgl_mulai_kerja + INTERVAL 2 YEAR) AS tanggal')
+						 ->where('(YEAR(tgl_mulai_kerja)+2)', $year)
+						 ->order_by('tgl_mulai_kerja', 'DESC')
+						 ->get('cms_sp_pegawai')->result();
 						 
-		$this->view('show_event', array('data'=>$data, 'datestring'=>$datestring, 'datestring2'=>$datestring2), "simpeg_stmik_pemberitahuan");
+		$this->view('show_event', array('data'=>$data), "simpeg_stmik_pemberitahuan");
 		}
 		
-	
 
 }

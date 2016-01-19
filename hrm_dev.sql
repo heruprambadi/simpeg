@@ -2,10 +2,10 @@
 -- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: May 16, 2014 at 07:25 PM
--- Server version: 5.5.27
--- PHP Version: 5.4.7
+-- Inang: 127.0.0.1
+-- Waktu pembuatan: 19 Jan 2016 pada 18.53
+-- Versi Server: 5.5.27
+-- Versi PHP: 5.4.7
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `hrm_dev`
+-- Basis data: `hrm_dev`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_aktif_kuliah`
+-- Struktur dari tabel `cms_aktif_kuliah`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_aktif_kuliah` (
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `cms_aktif_kuliah` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `cms_aktif_kuliah`
+-- Dumping data untuk tabel `cms_aktif_kuliah`
 --
 
 INSERT INTO `cms_aktif_kuliah` (`id_aktif_kuliah`, `nomor_surat`, `nama_mahasiswa`, `npm`, `tempat_lahir`, `tanggal_lahir`, `fk_id_jurusan`, `semester`, `tahun_akademis`) VALUES
@@ -49,7 +49,7 @@ INSERT INTO `cms_aktif_kuliah` (`id_aktif_kuliah`, `nomor_surat`, `nama_mahasisw
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_ci_sessions`
+-- Struktur dari tabel `cms_ci_sessions`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_ci_sessions` (
@@ -62,18 +62,17 @@ CREATE TABLE IF NOT EXISTS `cms_ci_sessions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `cms_ci_sessions`
+-- Dumping data untuk tabel `cms_ci_sessions`
 --
 
 INSERT INTO `cms_ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('2a05c7f06498d58af75dd86f0749d026', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36', 2006615182, 'a:7:{s:8:"cms_lang";s:7:"english";s:13:"cms_user_name";s:5:"admin";s:11:"cms_user_id";s:1:"1";s:18:"cms_user_real_name";s:5:"admin";s:14:"cms_user_email";s:22:"heruprambadi@gmail.com";s:21:"flash:old:cms_old_url";N;s:21:"flash:new:cms_old_url";N;}'),
-('71e370a70d4ef52483171d46afd9de30', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/537.36', 1400242658, 'a:7:{s:8:"cms_lang";s:7:"english";s:13:"cms_user_name";s:5:"admin";s:11:"cms_user_id";s:1:"1";s:18:"cms_user_real_name";s:5:"admin";s:14:"cms_user_email";s:22:"heruprambadi@gmail.com";s:21:"flash:old:cms_old_url";N;s:21:"flash:new:cms_old_url";N;}'),
-('98705c5d7f255b938ffd3a2b380d9a38', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/537.36', 1400242658, 'a:2:{s:21:"flash:new:cms_old_url";N;s:8:"cms_lang";s:7:"english";}');
+('14bdffa7dffec475d39bd5519b1dc9ac', '::1', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36', 1453195063, 'a:7:{s:8:"cms_lang";s:7:"english";s:13:"cms_user_name";s:5:"admin";s:11:"cms_user_id";s:1:"1";s:18:"cms_user_real_name";s:5:"admin";s:14:"cms_user_email";s:22:"heruprambadi@gmail.com";s:21:"flash:old:cms_old_url";N;s:21:"flash:new:cms_old_url";N;}'),
+('2a05c7f06498d58af75dd86f0749d026', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36', 2006615182, 'a:7:{s:8:"cms_lang";s:7:"english";s:13:"cms_user_name";s:5:"admin";s:11:"cms_user_id";s:1:"1";s:18:"cms_user_real_name";s:5:"admin";s:14:"cms_user_email";s:22:"heruprambadi@gmail.com";s:21:"flash:old:cms_old_url";N;s:21:"flash:new:cms_old_url";N;}');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_folder`
+-- Struktur dari tabel `cms_folder`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_folder` (
@@ -85,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `cms_folder` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_kelakuan_baik`
+-- Struktur dari tabel `cms_kelakuan_baik`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_kelakuan_baik` (
@@ -103,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `cms_kelakuan_baik` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_ket_lulusan`
+-- Struktur dari tabel `cms_ket_lulusan`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_ket_lulusan` (
@@ -119,7 +118,7 @@ CREATE TABLE IF NOT EXISTS `cms_ket_lulusan` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_ket_tdk_terima_beasiswa`
+-- Struktur dari tabel `cms_ket_tdk_terima_beasiswa`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_ket_tdk_terima_beasiswa` (
@@ -138,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `cms_ket_tdk_terima_beasiswa` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_konfigurasi`
+-- Struktur dari tabel `cms_konfigurasi`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_konfigurasi` (
@@ -156,7 +155,7 @@ CREATE TABLE IF NOT EXISTS `cms_konfigurasi` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_main_authorization`
+-- Struktur dari tabel `cms_main_authorization`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_main_authorization` (
@@ -167,7 +166,7 @@ CREATE TABLE IF NOT EXISTS `cms_main_authorization` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
--- Dumping data for table `cms_main_authorization`
+-- Dumping data untuk tabel `cms_main_authorization`
 --
 
 INSERT INTO `cms_main_authorization` (`authorization_id`, `authorization_name`, `description`) VALUES
@@ -179,7 +178,7 @@ INSERT INTO `cms_main_authorization` (`authorization_id`, `authorization_name`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_main_config`
+-- Struktur dari tabel `cms_main_config`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_main_config` (
@@ -191,7 +190,7 @@ CREATE TABLE IF NOT EXISTS `cms_main_config` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=33 ;
 
 --
--- Dumping data for table `cms_main_config`
+-- Dumping data untuk tabel `cms_main_config`
 --
 
 INSERT INTO `cms_main_config` (`config_id`, `config_name`, `value`, `description`) VALUES
@@ -199,7 +198,7 @@ INSERT INTO `cms_main_config` (`config_id`, `config_name`, `value`, `description
 (2, 'site_slogan', 'A Free CodeIgniter Based CMS Framework', 'Site slogan'),
 (3, 'site_logo', '{{ base_url }}assets/nocms/images/No-CMS-logo.png', 'Site logo'),
 (4, 'site_favicon', '{{ base_url }}assets/nocms/images/No-CMS-favicon.png', 'Site favicon'),
-(5, 'site_footer', 'Sistem Management Kepegawaian STMIK AMIK RIAU © Heru Prambadi', 'Site footer'),
+(5, 'site_footer', 'Sistem Management Kepegawaian © <a href = "http://heruprambadi.com" target = "_blank">heruprambadi.com</a>', 'Site footer'),
 (6, 'site_theme', 'minimal', 'Site theme'),
 (7, 'site_language', 'english', 'Site language'),
 (8, 'max_menu_depth', '5', 'Depth of menu recursive'),
@@ -231,7 +230,7 @@ INSERT INTO `cms_main_config` (`config_id`, `config_name`, `value`, `description
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_main_group`
+-- Struktur dari tabel `cms_main_group`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_main_group` (
@@ -242,7 +241,7 @@ CREATE TABLE IF NOT EXISTS `cms_main_group` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `cms_main_group`
+-- Dumping data untuk tabel `cms_main_group`
 --
 
 INSERT INTO `cms_main_group` (`group_id`, `group_name`, `description`) VALUES
@@ -252,7 +251,7 @@ INSERT INTO `cms_main_group` (`group_id`, `group_name`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_main_group_navigation`
+-- Struktur dari tabel `cms_main_group_navigation`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_main_group_navigation` (
@@ -263,7 +262,7 @@ CREATE TABLE IF NOT EXISTS `cms_main_group_navigation` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=40 ;
 
 --
--- Dumping data for table `cms_main_group_navigation`
+-- Dumping data untuk tabel `cms_main_group_navigation`
 --
 
 INSERT INTO `cms_main_group_navigation` (`id`, `group_id`, `navigation_id`) VALUES
@@ -305,7 +304,7 @@ INSERT INTO `cms_main_group_navigation` (`id`, `group_id`, `navigation_id`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_main_group_privilege`
+-- Struktur dari tabel `cms_main_group_privilege`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_main_group_privilege` (
@@ -318,7 +317,7 @@ CREATE TABLE IF NOT EXISTS `cms_main_group_privilege` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_main_group_user`
+-- Struktur dari tabel `cms_main_group_user`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_main_group_user` (
@@ -329,7 +328,7 @@ CREATE TABLE IF NOT EXISTS `cms_main_group_user` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `cms_main_group_user`
+-- Dumping data untuk tabel `cms_main_group_user`
 --
 
 INSERT INTO `cms_main_group_user` (`id`, `group_id`, `user_id`) VALUES
@@ -339,7 +338,7 @@ INSERT INTO `cms_main_group_user` (`id`, `group_id`, `user_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_main_group_widget`
+-- Struktur dari tabel `cms_main_group_widget`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_main_group_widget` (
@@ -352,7 +351,7 @@ CREATE TABLE IF NOT EXISTS `cms_main_group_widget` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_main_module`
+-- Struktur dari tabel `cms_main_module`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_main_module` (
@@ -365,7 +364,7 @@ CREATE TABLE IF NOT EXISTS `cms_main_module` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
--- Dumping data for table `cms_main_module`
+-- Dumping data untuk tabel `cms_main_module`
 --
 
 INSERT INTO `cms_main_module` (`module_id`, `module_name`, `module_path`, `version`, `user_id`) VALUES
@@ -376,7 +375,7 @@ INSERT INTO `cms_main_module` (`module_id`, `module_name`, `module_path`, `versi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_main_module_dependency`
+-- Struktur dari tabel `cms_main_module_dependency`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_main_module_dependency` (
@@ -389,7 +388,7 @@ CREATE TABLE IF NOT EXISTS `cms_main_module_dependency` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_main_navigation`
+-- Struktur dari tabel `cms_main_navigation`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_main_navigation` (
@@ -412,7 +411,7 @@ CREATE TABLE IF NOT EXISTS `cms_main_navigation` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=77 ;
 
 --
--- Dumping data for table `cms_main_navigation`
+-- Dumping data untuk tabel `cms_main_navigation`
 --
 
 INSERT INTO `cms_main_navigation` (`navigation_id`, `navigation_name`, `parent_id`, `title`, `page_title`, `page_keyword`, `description`, `url`, `authorization_id`, `active`, `index`, `is_static`, `static_content`, `only_content`, `default_theme`) VALUES
@@ -432,7 +431,7 @@ INSERT INTO `cms_main_navigation` (`navigation_id`, `navigation_name`, `parent_i
 (14, 'main_quicklink_management', 4, 'Quick Link Management', 'Quick Link Management', NULL, 'Manage Quick Link', 'main/quicklink', 4, 1, 7, 0, NULL, 0, NULL),
 (15, 'main_config_management', 4, 'Configuration Management', 'Configuration Management', NULL, 'Manage Configuration Parameters', 'main/config', 4, 1, 8, 0, NULL, 0, NULL),
 (16, 'main_layout', 4, 'Layout Management', 'Layout Management', NULL, 'Manage Layout', 'main/layout', 4, 1, 9, 0, NULL, 0, NULL),
-(17, 'main_index', NULL, 'Home', 'Home', NULL, 'There is no place like home :D', 'main/index', 1, 1, 0, 1, '<h1>\r\n	<span style="font-size:24px;">SISTEM MANAJEMEN KEPEGAWAIAN STMIK AMIK RIAU</span></h1>\r\n<h3>\r\n	<span style="font-size: 12px;">Diajukan untuk memenuhi persyaratan guna memperoleh gelar Sarjana Komputer</span></h3>\r\n<h3>\r\n	<strong style="font-size: 12px;">SEK</strong><strong style="font-size: 12px;">OL</strong><strong style="font-size: 12px;">A</strong><strong style="font-size: 12px;">H TINGGI MANAJEMEN INFORMATIKA DAN KOMPUTER AMIK&nbsp;</strong><strong style="font-size: 12px;">(STMIK-AMIK) RIAU</strong></h3>\r\n<h3>\r\n	<strong style="font-size: 12px;">JUR</strong><strong style="font-size: 12px;">U</strong><strong style="font-size: 12px;">S</strong><strong style="font-size: 12px;">A</strong><strong style="font-size: 12px;">N TEKNIK INFORMATIKA</strong></h3>\r\n<h3>\r\n	<span style="font-size: 12px;">PEKANBARU,&nbsp;</span><span style="font-size: 12px;">TAHUN 2013</span></h3>\r\n', 0, NULL),
+(17, 'main_index', NULL, 'Home', 'Home', NULL, 'There is no place like home :D', 'main/index', 1, 1, 0, 1, '<h1>\r\n	<span style="font-size:24px;">SISTEM MANAJEMEN KEPEGAWAIAN</span></h1>\r\n<p>\r\n	<span style="font-size:12px;">Dibuat hanya untuk pembelajaran. Tidak cocok untuk diimplementasikan. Jika ada yang mau mengembangkan untuk keperluan komersial, silahkan. Gratis kok :D</span></p>\r\n<p>\r\n	<span style="font-size:12px;">Dibuat dengan NoCMS - codeigniter 2.</span></p>\r\n<p>\r\n	<span style="font-size:12px;">Fitur :&nbsp;</span></p>\r\n<p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: ''Helvetica Neue'', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px;">\r\n	<span style="font-size:12px;">Butuh bantuan ? email ke heruprambadi@gmail.com</span></p>\r\n<p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: ''Helvetica Neue'', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px;">\r\n	<span style="font-size:12px;">Punya pertanyaan seputar program ini ? Tanyakan disini.<a href="http://facebook.com/groups/924598607617619/" style="box-sizing: border-box; color: rgb(66, 139, 202); text-decoration: none; background: transparent;" target="_blank">http://facebook.com/groups/924598607617619/</a></span></p>\r\n<p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: ''Helvetica Neue'', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px;">\r\n	<span style="font-size:12px;">Kunjungi web saya :&nbsp;<a href="http://heruprambadi.com/" style="box-sizing: border-box; color: rgb(66, 139, 202); text-decoration: none; background: transparent;" target="_blank">heruprambadi.com</a></span></p>\r\n', 0, NULL),
 (18, 'main_language', NULL, 'Language', 'Language', NULL, 'Choose the language', 'main/language', 1, 1, 0, 0, NULL, 0, NULL),
 (19, 'main_third_party_auth', NULL, 'Third Party Authentication', 'Third Party Authentication', NULL, 'Third Party Authentication', 'main/hauth/index', 1, 1, 0, 0, NULL, 0, NULL),
 (30, 'simpeg_stmik_index', NULL, 'Simpeg Stmik', NULL, NULL, NULL, 'simpeg_stmik/simpeg_stmik', 4, 1, 8, 0, NULL, 0, NULL),
@@ -483,7 +482,7 @@ INSERT INTO `cms_main_navigation` (`navigation_id`, `navigation_name`, `parent_i
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_main_privilege`
+-- Struktur dari tabel `cms_main_privilege`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_main_privilege` (
@@ -496,7 +495,7 @@ CREATE TABLE IF NOT EXISTS `cms_main_privilege` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `cms_main_privilege`
+-- Dumping data untuk tabel `cms_main_privilege`
 --
 
 INSERT INTO `cms_main_privilege` (`privilege_id`, `privilege_name`, `title`, `description`, `authorization_id`) VALUES
@@ -506,7 +505,7 @@ INSERT INTO `cms_main_privilege` (`privilege_id`, `privilege_name`, `title`, `de
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_main_quicklink`
+-- Struktur dari tabel `cms_main_quicklink`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_main_quicklink` (
@@ -517,7 +516,7 @@ CREATE TABLE IF NOT EXISTS `cms_main_quicklink` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
--- Dumping data for table `cms_main_quicklink`
+-- Dumping data untuk tabel `cms_main_quicklink`
 --
 
 INSERT INTO `cms_main_quicklink` (`quicklink_id`, `navigation_id`, `index`) VALUES
@@ -533,7 +532,7 @@ INSERT INTO `cms_main_quicklink` (`quicklink_id`, `navigation_id`, `index`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_main_user`
+-- Struktur dari tabel `cms_main_user`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_main_user` (
@@ -554,20 +553,21 @@ CREATE TABLE IF NOT EXISTS `cms_main_user` (
   `auth_AOL` varchar(100) DEFAULT NULL,
   `auth_Live` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `cms_main_user`
+-- Dumping data untuk tabel `cms_main_user`
 --
 
 INSERT INTO `cms_main_user` (`user_id`, `user_name`, `email`, `password`, `activation_code`, `real_name`, `active`, `auth_OpenID`, `auth_Facebook`, `auth_Twitter`, `auth_Yahoo`, `auth_LinkedIn`, `auth_MySpace`, `auth_Foursquare`, `auth_AOL`, `auth_Live`) VALUES
 (1, 'admin', 'heruprambadi@gmail.com', '21232f297a57a5a743894a0e4a801fc3', NULL, 'admin', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(2, 'personalia', 'personalia@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', NULL, 'Admin Personalia', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(2, 'personalia', 'personalia@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', NULL, 'Admin Personalia', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(3, 'rrrr', 'ewfwe', '73882ab1fa529d7273da0db6b49cc4f3', NULL, 'fewfew', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_main_widget`
+-- Struktur dari tabel `cms_main_widget`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_main_widget` (
@@ -586,11 +586,11 @@ CREATE TABLE IF NOT EXISTS `cms_main_widget` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
 --
--- Dumping data for table `cms_main_widget`
+-- Dumping data untuk tabel `cms_main_widget`
 --
 
 INSERT INTO `cms_main_widget` (`widget_id`, `widget_name`, `title`, `description`, `url`, `authorization_id`, `active`, `index`, `is_static`, `static_content`, `slug`) VALUES
-(1, 'section_top_fix', 'Top Fix Section', '', '', 1, 1, 1, 1, '{{ widget_name:top_navigation }}', NULL),
+(1, 'section_top_fix', 'Top Fix Section', NULL, NULL, 1, 1, 1, 1, '{{ widget_name:top_navigation }}', NULL),
 (2, 'section_banner', 'Banner Section', '', '', 1, 1, 2, 1, '<div class="span2">\r\n  <img src ="{{ site_logo }}" />\r\n</div>\r\n<div class="span10">\r\n  <h1>{{ site_name }}</h1>\r\n  <p>{{ site_slogan }}</p>\r\n</div>', NULL),
 (3, 'section_left', 'Left Section', '', '', 1, 1, 3, 1, '', NULL),
 (4, 'section_right', 'Right Section', '', '', 1, 1, 4, 1, '{{ widget_slug:sidebar }}<hr />{{ widget_slug:advertisement }}', NULL),
@@ -610,7 +610,7 @@ INSERT INTO `cms_main_widget` (`widget_id`, `widget_name`, `title`, `description
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_master_hal`
+-- Struktur dari tabel `cms_master_hal`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_master_hal` (
@@ -622,7 +622,7 @@ CREATE TABLE IF NOT EXISTS `cms_master_hal` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_mas_jurusan`
+-- Struktur dari tabel `cms_mas_jurusan`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_mas_jurusan` (
@@ -635,7 +635,7 @@ CREATE TABLE IF NOT EXISTS `cms_mas_jurusan` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_permohonan_cuti`
+-- Struktur dari tabel `cms_permohonan_cuti`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_permohonan_cuti` (
@@ -654,7 +654,7 @@ CREATE TABLE IF NOT EXISTS `cms_permohonan_cuti` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_permohonan_peng_data`
+-- Struktur dari tabel `cms_permohonan_peng_data`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_permohonan_peng_data` (
@@ -672,7 +672,7 @@ CREATE TABLE IF NOT EXISTS `cms_permohonan_peng_data` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_permohonan_riset`
+-- Struktur dari tabel `cms_permohonan_riset`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_permohonan_riset` (
@@ -691,7 +691,7 @@ CREATE TABLE IF NOT EXISTS `cms_permohonan_riset` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_pkl`
+-- Struktur dari tabel `cms_pkl`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_pkl` (
@@ -710,7 +710,7 @@ CREATE TABLE IF NOT EXISTS `cms_pkl` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_sp_event`
+-- Struktur dari tabel `cms_sp_event`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_sp_event` (
@@ -722,18 +722,10 @@ CREATE TABLE IF NOT EXISTS `cms_sp_event` (
   PRIMARY KEY (`id_event`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
---
--- Dumping data for table `cms_sp_event`
---
-
-INSERT INTO `cms_sp_event` (`id_event`, `fk_id_pegawai`, `nama_event`, `tanggal`, `pangkat_baru`) VALUES
-(1, 3, 'Naik Pangkat', '2016-12-01', 2),
-(2, 3, 'Naik Gaji', '2014-12-01', 2);
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_sp_his_pangkat`
+-- Struktur dari tabel `cms_sp_his_pangkat`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_sp_his_pangkat` (
@@ -748,7 +740,7 @@ CREATE TABLE IF NOT EXISTS `cms_sp_his_pangkat` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_sp_lampiran`
+-- Struktur dari tabel `cms_sp_lampiran`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_sp_lampiran` (
@@ -761,7 +753,7 @@ CREATE TABLE IF NOT EXISTS `cms_sp_lampiran` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `cms_sp_lampiran`
+-- Dumping data untuk tabel `cms_sp_lampiran`
 --
 
 INSERT INTO `cms_sp_lampiran` (`id_att_biodata`, `fk_id_pegawai`, `nama_file`, `file_biodata`, `ket`) VALUES
@@ -772,7 +764,7 @@ INSERT INTO `cms_sp_lampiran` (`id_att_biodata`, `fk_id_pegawai`, `nama_file`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_sp_mas_gaji`
+-- Struktur dari tabel `cms_sp_mas_gaji`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_sp_mas_gaji` (
@@ -784,7 +776,7 @@ CREATE TABLE IF NOT EXISTS `cms_sp_mas_gaji` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=305 ;
 
 --
--- Dumping data for table `cms_sp_mas_gaji`
+-- Dumping data untuk tabel `cms_sp_mas_gaji`
 --
 
 INSERT INTO `cms_sp_mas_gaji` (`id_mas_gaji`, `fk_id_mas_pangkat`, `lama_kerja`, `gaji`) VALUES
@@ -1064,7 +1056,7 @@ INSERT INTO `cms_sp_mas_gaji` (`id_mas_gaji`, `fk_id_mas_pangkat`, `lama_kerja`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_sp_mas_jabatan`
+-- Struktur dari tabel `cms_sp_mas_jabatan`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_sp_mas_jabatan` (
@@ -1074,7 +1066,7 @@ CREATE TABLE IF NOT EXISTS `cms_sp_mas_jabatan` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
--- Dumping data for table `cms_sp_mas_jabatan`
+-- Dumping data untuk tabel `cms_sp_mas_jabatan`
 --
 
 INSERT INTO `cms_sp_mas_jabatan` (`id_mas_jabatan`, `nama_mas_jabatan`) VALUES
@@ -1086,7 +1078,7 @@ INSERT INTO `cms_sp_mas_jabatan` (`id_mas_jabatan`, `nama_mas_jabatan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_sp_mas_jk`
+-- Struktur dari tabel `cms_sp_mas_jk`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_sp_mas_jk` (
@@ -1096,7 +1088,7 @@ CREATE TABLE IF NOT EXISTS `cms_sp_mas_jk` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `cms_sp_mas_jk`
+-- Dumping data untuk tabel `cms_sp_mas_jk`
 --
 
 INSERT INTO `cms_sp_mas_jk` (`id_mas_jk`, `nama_mas_jk`) VALUES
@@ -1106,7 +1098,7 @@ INSERT INTO `cms_sp_mas_jk` (`id_mas_jk`, `nama_mas_jk`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_sp_mas_pangkat`
+-- Struktur dari tabel `cms_sp_mas_pangkat`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_sp_mas_pangkat` (
@@ -1116,7 +1108,7 @@ CREATE TABLE IF NOT EXISTS `cms_sp_mas_pangkat` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
 
 --
--- Dumping data for table `cms_sp_mas_pangkat`
+-- Dumping data untuk tabel `cms_sp_mas_pangkat`
 --
 
 INSERT INTO `cms_sp_mas_pangkat` (`id_mas_pangkat`, `nama_mas_pangkat`) VALUES
@@ -1141,7 +1133,7 @@ INSERT INTO `cms_sp_mas_pangkat` (`id_mas_pangkat`, `nama_mas_pangkat`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_sp_mas_pend`
+-- Struktur dari tabel `cms_sp_mas_pend`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_sp_mas_pend` (
@@ -1151,7 +1143,7 @@ CREATE TABLE IF NOT EXISTS `cms_sp_mas_pend` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
--- Dumping data for table `cms_sp_mas_pend`
+-- Dumping data untuk tabel `cms_sp_mas_pend`
 --
 
 INSERT INTO `cms_sp_mas_pend` (`id_mas_tingkat`, `nama_mas_pend`) VALUES
@@ -1169,7 +1161,7 @@ INSERT INTO `cms_sp_mas_pend` (`id_mas_tingkat`, `nama_mas_pend`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_sp_mas_rekomendasi`
+-- Struktur dari tabel `cms_sp_mas_rekomendasi`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_sp_mas_rekomendasi` (
@@ -1179,7 +1171,7 @@ CREATE TABLE IF NOT EXISTS `cms_sp_mas_rekomendasi` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `cms_sp_mas_rekomendasi`
+-- Dumping data untuk tabel `cms_sp_mas_rekomendasi`
 --
 
 INSERT INTO `cms_sp_mas_rekomendasi` (`id_rekomendasi`, `nama_rekomendasi`) VALUES
@@ -1190,7 +1182,7 @@ INSERT INTO `cms_sp_mas_rekomendasi` (`id_rekomendasi`, `nama_rekomendasi`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_sp_mas_status_pegawai`
+-- Struktur dari tabel `cms_sp_mas_status_pegawai`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_sp_mas_status_pegawai` (
@@ -1200,7 +1192,7 @@ CREATE TABLE IF NOT EXISTS `cms_sp_mas_status_pegawai` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `cms_sp_mas_status_pegawai`
+-- Dumping data untuk tabel `cms_sp_mas_status_pegawai`
 --
 
 INSERT INTO `cms_sp_mas_status_pegawai` (`id_mas_status_pegawai`, `nama_mas_status_pegawai`) VALUES
@@ -1211,7 +1203,7 @@ INSERT INTO `cms_sp_mas_status_pegawai` (`id_mas_status_pegawai`, `nama_mas_stat
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_sp_pegawai`
+-- Struktur dari tabel `cms_sp_pegawai`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_sp_pegawai` (
@@ -1223,36 +1215,35 @@ CREATE TABLE IF NOT EXISTS `cms_sp_pegawai` (
   `stt_pegawai` int(2) DEFAULT NULL,
   `nik` int(12) DEFAULT NULL,
   `tgl_mulai_kerja` date DEFAULT NULL,
-  `tmt_pangkat` date NOT NULL,
-  `tgl_sd_pangkat` date NOT NULL,
+  `tmt_pangkat` date DEFAULT NULL,
+  `tgl_sd_pangkat` date DEFAULT NULL,
   `pangkat` int(2) DEFAULT NULL,
-  `jabatan` int(2) NOT NULL,
+  `jabatan` int(2) DEFAULT NULL,
   `sisa_peny_ijazah` int(9) DEFAULT NULL,
   `peny_ijazah` date DEFAULT NULL,
-  `gaji_lama` int(14) NOT NULL,
-  `gaji_baru` int(14) NOT NULL,
-  `id_gaji` int(3) NOT NULL,
+  `gaji_lama` int(14) DEFAULT NULL,
+  `gaji_baru` int(14) DEFAULT NULL,
+  `id_gaji` int(3) DEFAULT NULL,
   `gaji` int(14) DEFAULT NULL,
-  `beasiswa` int(2) NOT NULL,
-  `lama_studi` int(2) NOT NULL,
-  `rekomendasi` int(2) NOT NULL,
-  `foto` varchar(50) NOT NULL,
+  `beasiswa` int(2) DEFAULT NULL,
+  `lama_studi` int(2) DEFAULT NULL,
+  `rekomendasi` int(2) DEFAULT NULL,
+  `foto` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_pegawai`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
 
 --
--- Dumping data for table `cms_sp_pegawai`
+-- Dumping data untuk tabel `cms_sp_pegawai`
 --
 
 INSERT INTO `cms_sp_pegawai` (`id_pegawai`, `nama_kar`, `tempat_lahir`, `tgl_lahir`, `jk`, `stt_pegawai`, `nik`, `tgl_mulai_kerja`, `tmt_pangkat`, `tgl_sd_pangkat`, `pangkat`, `jabatan`, `sisa_peny_ijazah`, `peny_ijazah`, `gaji_lama`, `gaji_baru`, `id_gaji`, `gaji`, `beasiswa`, `lama_studi`, `rekomendasi`, `foto`) VALUES
-(1, 'ff', NULL, '2013-12-02', 1, 3, 33, '2013-12-15', '2013-12-01', '0000-00-00', 3, 0, NULL, NULL, 0, 0, 2, NULL, 0, 0, 0, ''),
-(2, 'ff', 'ff', '2013-12-02', 1, 3, 33, '2013-12-15', '2013-12-31', '0000-00-00', 3, 0, NULL, NULL, 0, 0, 2, NULL, 1, 0, 0, ''),
-(3, 'uuyui', 'iuyuiuyui', '2013-12-01', 1, 3, 333, '1994-12-01', '2013-12-31', '2017-12-31', 1, 0, NULL, NULL, 945000, 945000, 1, 945000, 0, 0, 0, '');
+(29, 'Heru Prambadi', 'Duri', '1991-05-18', 1, 3, 908070605, '2014-01-01', '2014-01-01', NULL, 5, 4, NULL, NULL, NULL, NULL, 228, NULL, 0, NULL, NULL, NULL),
+(30, 'Yoghi Sastra', 'Duri', '1988-01-02', 1, 1, 22221111, '2012-01-15', '2012-01-15', NULL, 9, 1, NULL, NULL, NULL, NULL, 188, NULL, 0, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_sp_pendidikan`
+-- Struktur dari tabel `cms_sp_pendidikan`
 --
 
 CREATE TABLE IF NOT EXISTS `cms_sp_pendidikan` (
@@ -1268,7 +1259,7 @@ CREATE TABLE IF NOT EXISTS `cms_sp_pendidikan` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `cms_sp_pendidikan`
+-- Dumping data untuk tabel `cms_sp_pendidikan`
 --
 
 INSERT INTO `cms_sp_pendidikan` (`id_pendidikan`, `fk_id_pegawai`, `fk_id_mas_pend`, `nama_tempat_belajar`, `tahun`, `ipk`, `dari_tanggal`, `sampai_tanggal`) VALUES
@@ -1278,7 +1269,7 @@ INSERT INTO `cms_sp_pendidikan` (`id_pendidikan`, `fk_id_pegawai`, `fk_id_mas_pe
 -- --------------------------------------------------------
 
 --
--- Table structure for table `events`
+-- Struktur dari tabel `events`
 --
 
 CREATE TABLE IF NOT EXISTS `events` (
@@ -1288,7 +1279,7 @@ CREATE TABLE IF NOT EXISTS `events` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `events`
+-- Dumping data untuk tabel `events`
 --
 
 INSERT INTO `events` (`event_date`, `total_events`) VALUES
@@ -1299,7 +1290,7 @@ INSERT INTO `events` (`event_date`, `total_events`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `event_detail`
+-- Struktur dari tabel `event_detail`
 --
 
 CREATE TABLE IF NOT EXISTS `event_detail` (
@@ -1312,7 +1303,7 @@ CREATE TABLE IF NOT EXISTS `event_detail` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
--- Dumping data for table `event_detail`
+-- Dumping data untuk tabel `event_detail`
 --
 
 INSERT INTO `event_detail` (`idevent`, `event_date`, `event_time`, `event`) VALUES
@@ -1323,29 +1314,23 @@ INSERT INTO `event_detail` (`idevent`, `event_date`, `event_time`, `event`) VALU
 (6, '2014-05-08', '01:06:00', 'ddd');
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `event_detail`
+-- Ketidakleluasaan untuk tabel `event_detail`
 --
 ALTER TABLE `event_detail`
   ADD CONSTRAINT `event_detail_ibfk_1` FOREIGN KEY (`event_date`) REFERENCES `events` (`event_date`);
 
 DELIMITER $$
 --
--- Events
+-- Event
 --
 CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat369` ON SCHEDULE EVERY 11 SECOND STARTS '2017-11-17 23:53:54' ENDS '2017-11-17 23:54:54' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
 						   			ALTER EVENT ev_pangkat_369
 						   			ON SCHEDULE EVERY 4 YEAR
 						   			STARTS CURRENT_TIMESTAMP + INTERVAL 4 YEAR;
-						   			END$$
-
-CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_gaji369` ON SCHEDULE EVERY 11 SECOND STARTS '2015-11-17 23:53:54' ENDS '2015-11-17 23:54:54' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-						   			ALTER EVENT ev_gaji_369
-						   			ON SCHEDULE EVERY 2 YEAR
-						   			STARTS CURRENT_TIMESTAMP + INTERVAL 2 YEAR;
 						   			END$$
 
 CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat350` ON SCHEDULE EVERY 4 YEAR STARTS '2017-11-19 14:16:25' ENDS '2017-11-19 14:17:25' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
@@ -1354,34 +1339,10 @@ CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat350` ON SCHEDULE EVERY 4 
 						   			STARTS CURRENT_TIMESTAMP + INTERVAL 4 YEAR;
 						   			END$$
 
-CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_gaji365` ON SCHEDULE EVERY 11 SECOND STARTS '2015-11-17 23:35:56' ENDS '2015-11-17 23:36:56' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-						   			ALTER EVENT ev_gaji_365
-						   			ON SCHEDULE EVERY 2 YEAR
-						   			STARTS CURRENT_TIMESTAMP + INTERVAL 2 YEAR;
-						   			END$$
-
-CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_gaji350` ON SCHEDULE EVERY 2 YEAR STARTS '2015-11-19 14:16:25' ENDS '2015-11-19 14:17:25' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-						   			ALTER EVENT ev_gaji_350
-						   			ON SCHEDULE EVERY 2 YEAR
-						   			STARTS CURRENT_TIMESTAMP + INTERVAL 2 YEAR;
-						   			END$$
-
 CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat365` ON SCHEDULE EVERY 11 SECOND STARTS '2017-11-17 23:35:56' ENDS '2017-11-17 23:36:56' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
 						   			ALTER EVENT ev_pangkat_365
 						   			ON SCHEDULE EVERY 4 YEAR
 						   			STARTS CURRENT_TIMESTAMP + INTERVAL 4 YEAR;
-						   			END$$
-
-CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_gaji364` ON SCHEDULE EVERY 11 SECOND STARTS '2015-11-17 23:30:26' ENDS '2015-11-17 23:31:26' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-						   			ALTER EVENT ev_gaji_364
-						   			ON SCHEDULE EVERY 2 YEAR
-						   			STARTS CURRENT_TIMESTAMP + INTERVAL 2 YEAR;
-						   			END$$
-
-CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_gaji347` ON SCHEDULE EVERY 11 SECOND STARTS '2015-11-17 22:57:01' ENDS '2015-11-17 22:58:01' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-						   			ALTER EVENT ev_gaji_347
-						   			ON SCHEDULE EVERY 2 YEAR
-						   			STARTS CURRENT_TIMESTAMP + INTERVAL 2 YEAR;
 						   			END$$
 
 CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat348` ON SCHEDULE EVERY 11 SECOND STARTS '2017-11-17 23:01:10' ENDS '2017-11-17 23:02:10' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
@@ -1390,34 +1351,16 @@ CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat348` ON SCHEDULE EVERY 11
 						   			STARTS CURRENT_TIMESTAMP + INTERVAL 4 YEAR;
 						   			END$$
 
-CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_gaji348` ON SCHEDULE EVERY 11 SECOND STARTS '2015-11-17 23:01:10' ENDS '2015-11-17 23:02:10' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-						   			ALTER EVENT ev_gaji_348
-						   			ON SCHEDULE EVERY 2 YEAR
-						   			STARTS CURRENT_TIMESTAMP + INTERVAL 2 YEAR;
-						   			END$$
-
 CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat349` ON SCHEDULE EVERY 11 SECOND STARTS '2017-11-17 23:04:25' ENDS '2017-11-17 23:05:25' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
 						   			ALTER EVENT ev_pangkat_349
 						   			ON SCHEDULE EVERY 4 YEAR
 						   			STARTS CURRENT_TIMESTAMP + INTERVAL 4 YEAR;
 						   			END$$
 
-CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_gaji349` ON SCHEDULE EVERY 11 SECOND STARTS '2015-11-17 23:04:25' ENDS '2015-11-17 23:05:25' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-						   			ALTER EVENT ev_gaji_349
-						   			ON SCHEDULE EVERY 2 YEAR
-						   			STARTS CURRENT_TIMESTAMP + INTERVAL 2 YEAR;
-						   			END$$
-
 CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat356` ON SCHEDULE EVERY 11 SECOND STARTS '2017-11-17 23:18:14' ENDS '2017-11-17 23:19:14' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
 						   			ALTER EVENT ev_pangkat_356
 						   			ON SCHEDULE EVERY 4 YEAR
 						   			STARTS CURRENT_TIMESTAMP + INTERVAL 4 YEAR;
-						   			END$$
-
-CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_gaji356` ON SCHEDULE EVERY 11 SECOND STARTS '2015-11-17 23:18:14' ENDS '2015-11-17 23:19:14' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-						   			ALTER EVENT ev_gaji_356
-						   			ON SCHEDULE EVERY 2 YEAR
-						   			STARTS CURRENT_TIMESTAMP + INTERVAL 2 YEAR;
 						   			END$$
 
 CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat364` ON SCHEDULE EVERY 11 SECOND STARTS '2017-11-17 23:30:26' ENDS '2017-11-17 23:31:26' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
@@ -1432,34 +1375,16 @@ CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat367` ON SCHEDULE EVERY 11
 						   			STARTS CURRENT_TIMESTAMP + INTERVAL 4 YEAR;
 						   			END$$
 
-CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_gaji367` ON SCHEDULE EVERY 11 SECOND STARTS '2015-11-17 23:45:42' ENDS '2015-11-17 23:46:42' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-						   			ALTER EVENT ev_gaji_367
-						   			ON SCHEDULE EVERY 2 YEAR
-						   			STARTS CURRENT_TIMESTAMP + INTERVAL 2 YEAR;
-						   			END$$
-
 CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat346` ON SCHEDULE EVERY 11 SECOND STARTS '2017-11-17 22:44:53' ENDS '2017-11-17 22:45:53' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
 						   			ALTER EVENT ev_pangkat_346
 						   			ON SCHEDULE EVERY 4 YEAR
 						   			STARTS CURRENT_TIMESTAMP + INTERVAL 4 YEAR;
 						   			END$$
 
-CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_gaji346` ON SCHEDULE EVERY 11 SECOND STARTS '2015-11-17 22:44:53' ENDS '2015-11-17 22:45:53' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-						   			ALTER EVENT ev_gaji_346
-						   			ON SCHEDULE EVERY 2 YEAR
-						   			STARTS CURRENT_TIMESTAMP + INTERVAL 2 YEAR;
-						   			END$$
-
 CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat345` ON SCHEDULE EVERY 11 SECOND STARTS '2017-11-07 00:44:22' ENDS '2017-11-07 00:45:22' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
 						   			ALTER EVENT ev_pangkat_345
 						   			ON SCHEDULE EVERY 4 YEAR
 						   			STARTS CURRENT_TIMESTAMP + INTERVAL 4 YEAR;
-						   			END$$
-
-CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_gaji345` ON SCHEDULE EVERY 11 SECOND STARTS '2015-11-07 00:44:22' ENDS '2015-11-07 00:45:22' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-						   			ALTER EVENT ev_gaji_345
-						   			ON SCHEDULE EVERY 2 YEAR
-						   			STARTS CURRENT_TIMESTAMP + INTERVAL 2 YEAR;
 						   			END$$
 
 CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat347` ON SCHEDULE EVERY 11 SECOND STARTS '2017-11-17 22:57:01' ENDS '2017-11-17 22:58:01' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
@@ -1474,22 +1399,10 @@ CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat3` ON SCHEDULE EVERY 11 S
 						   			STARTS CURRENT_TIMESTAMP + INTERVAL 4 YEAR;
 						   			END$$
 
-CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_gaji3` ON SCHEDULE EVERY 11 SECOND STARTS '2015-12-17 12:21:37' ENDS '2015-12-17 12:22:37' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-						   			ALTER EVENT ev_gaji_3
-						   			ON SCHEDULE EVERY 2 YEAR
-						   			STARTS CURRENT_TIMESTAMP + INTERVAL 2 YEAR;
-						   			END$$
-
 CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat340` ON SCHEDULE EVERY 11 SECOND STARTS '2017-11-07 00:29:56' ENDS '2017-11-07 00:30:56' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
 						   			ALTER EVENT ev_pangkat_340
 						   			ON SCHEDULE EVERY 4 YEAR
 						   			STARTS CURRENT_TIMESTAMP + INTERVAL 4 YEAR;
-						   			END$$
-
-CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_gaji340` ON SCHEDULE EVERY 11 SECOND STARTS '2015-11-07 00:29:56' ENDS '2015-11-07 00:30:56' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-						   			ALTER EVENT ev_gaji_340
-						   			ON SCHEDULE EVERY 2 YEAR
-						   			STARTS CURRENT_TIMESTAMP + INTERVAL 2 YEAR;
 						   			END$$
 
 CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat341` ON SCHEDULE EVERY 11 SECOND STARTS '2017-11-07 00:32:54' ENDS '2017-11-07 00:33:54' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
@@ -1498,19 +1411,13 @@ CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat341` ON SCHEDULE EVERY 11
 						   			STARTS CURRENT_TIMESTAMP + INTERVAL 4 YEAR;
 						   			END$$
 
-CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_gaji341` ON SCHEDULE EVERY 11 SECOND STARTS '2015-11-07 00:32:54' ENDS '2015-11-07 00:33:54' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-						   			ALTER EVENT ev_gaji_341
-						   			ON SCHEDULE EVERY 2 YEAR
-						   			STARTS CURRENT_TIMESTAMP + INTERVAL 2 YEAR;
-						   			END$$
-
 CREATE DEFINER=`root`@`localhost` EVENT `ev_pangkat_3` ON SCHEDULE EVERY 4 YEAR STARTS '2017-12-17 12:21:37' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
 								INSERT INTO hrm_dev.cms_sp_his_pangkat (fk_id_pegawai, fk_id_mas_pangkat, dari_tgl, sampai_tgl) SELECT cms_sp_pegawai.id_pegawai, cms_sp_pegawai.pangkat, cms_sp_pegawai.tmt_pangkat, cms_sp_pegawai.tgl_sd_pangkat FROM hrm_dev.cms_sp_pegawai WHERE cms_sp_pegawai.id_pegawai = '3' and cms_sp_pegawai.pangkat < '17';
 								UPDATE hrm_dev.cms_sp_pegawai SET cms_sp_pegawai.pangkat = cms_sp_pegawai.pangkat + 1, cms_sp_pegawai.tmt_pangkat = cms_sp_pegawai.tmt_pangkat + INTERVAL 4 YEAR, cms_sp_pegawai.tgl_sd_pangkat = cms_sp_pegawai.tgl_sd_pangkat + INTERVAL 4 YEAR WHERE cms_sp_pegawai.id_pegawai = '3' and cms_sp_pegawai.pangkat < '17';
 								UPDATE hrm_dev.cms_sp_event SET cms_sp_event.pangkat_baru = cms_sp_event.pangkat_baru + 1, cms_sp_event.tanggal = cms_sp_event.tanggal + INTERVAL 4 YEAR WHERE cms_sp_event.fk_id_pegawai = '3' AND cms_sp_event.nama_event = 'Naik Pangkat' AND cms_sp_event.pangkat_baru < '17';
 								END$$
 
-CREATE DEFINER=`root`@`localhost` EVENT `ev_gaji_3` ON SCHEDULE EVERY 2 YEAR STARTS '2015-12-17 12:21:37' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
+CREATE DEFINER=`root`@`localhost` EVENT `ev_gaji_3` ON SCHEDULE EVERY 30 SECOND STARTS '2016-01-18 23:26:45' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
         						UPDATE hrm_dev.cms_sp_pegawai, hrm_dev.cms_sp_event SET cms_sp_event.tanggal = cms_sp_event.tanggal + INTERVAL 2 YEAR WHERE cms_sp_event.fk_id_pegawai = '3' AND cms_sp_pegawai.tgl_lahir <= cms_sp_pegawai.tgl_lahir + INTERVAL 60 YEAR;
         						UPDATE cms_sp_pegawai, cms_sp_mas_gaji SET cms_sp_pegawai.id_gaji = cms_sp_mas_gaji.id_mas_gaji WHERE cms_sp_pegawai.id_pegawai = '3' AND cms_sp_pegawai.pangkat = cms_sp_mas_gaji.fk_id_mas_pangkat AND cms_sp_mas_gaji.lama_kerja > '17' AND cms_sp_mas_gaji.lama_kerja <= '19';
 								UPDATE cms_sp_pegawai, cms_sp_mas_gaji SET cms_sp_pegawai.gaji_lama = cms_sp_pegawai.gaji_baru WHERE cms_sp_pegawai.id_pegawai = '3' AND cms_sp_pegawai.id_gaji = cms_sp_mas_gaji.id_mas_gaji;
@@ -1524,22 +1431,10 @@ CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat342` ON SCHEDULE EVERY 11
 						   			STARTS CURRENT_TIMESTAMP + INTERVAL 4 YEAR;
 						   			END$$
 
-CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_gaji342` ON SCHEDULE EVERY 11 SECOND STARTS '2015-11-07 00:35:36' ENDS '2015-11-07 00:36:36' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-						   			ALTER EVENT ev_gaji_342
-						   			ON SCHEDULE EVERY 2 YEAR
-						   			STARTS CURRENT_TIMESTAMP + INTERVAL 2 YEAR;
-						   			END$$
-
 CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat343` ON SCHEDULE EVERY 11 SECOND STARTS '2017-11-07 00:38:40' ENDS '2017-11-07 00:39:40' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
 						   			ALTER EVENT ev_pangkat_343
 						   			ON SCHEDULE EVERY 4 YEAR
 						   			STARTS CURRENT_TIMESTAMP + INTERVAL 4 YEAR;
-						   			END$$
-
-CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_gaji343` ON SCHEDULE EVERY 11 SECOND STARTS '2015-11-07 00:38:40' ENDS '2015-11-07 00:39:40' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-						   			ALTER EVENT ev_gaji_343
-						   			ON SCHEDULE EVERY 2 YEAR
-						   			STARTS CURRENT_TIMESTAMP + INTERVAL 2 YEAR;
 						   			END$$
 
 CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat344` ON SCHEDULE EVERY 11 SECOND STARTS '2017-11-07 00:41:51' ENDS '2017-11-07 00:42:51' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
@@ -1548,34 +1443,16 @@ CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat344` ON SCHEDULE EVERY 11
 						   			STARTS CURRENT_TIMESTAMP + INTERVAL 4 YEAR;
 						   			END$$
 
-CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_gaji344` ON SCHEDULE EVERY 11 SECOND STARTS '2015-11-07 00:41:51' ENDS '2015-11-07 00:42:51' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-						   			ALTER EVENT ev_gaji_344
-						   			ON SCHEDULE EVERY 2 YEAR
-						   			STARTS CURRENT_TIMESTAMP + INTERVAL 2 YEAR;
-						   			END$$
-
 CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat366` ON SCHEDULE EVERY 11 SECOND STARTS '2017-11-17 23:44:16' ENDS '2017-11-17 23:45:16' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
 						   			ALTER EVENT ev_pangkat_366
 						   			ON SCHEDULE EVERY 4 YEAR
 						   			STARTS CURRENT_TIMESTAMP + INTERVAL 4 YEAR;
 						   			END$$
 
-CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_gaji366` ON SCHEDULE EVERY 11 SECOND STARTS '2015-11-17 23:44:16' ENDS '2015-11-17 23:45:16' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-						   			ALTER EVENT ev_gaji_366
-						   			ON SCHEDULE EVERY 2 YEAR
-						   			STARTS CURRENT_TIMESTAMP + INTERVAL 2 YEAR;
-						   			END$$
-
 CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_pangkat368` ON SCHEDULE EVERY 11 SECOND STARTS '2017-11-17 23:49:11' ENDS '2017-11-17 23:50:11' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
 						   			ALTER EVENT ev_pangkat_368
 						   			ON SCHEDULE EVERY 4 YEAR
 						   			STARTS CURRENT_TIMESTAMP + INTERVAL 4 YEAR;
-						   			END$$
-
-CREATE DEFINER=`root`@`localhost` EVENT `ev_upd_gaji368` ON SCHEDULE EVERY 11 SECOND STARTS '2015-11-17 23:49:11' ENDS '2015-11-17 23:50:11' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
-						   			ALTER EVENT ev_gaji_368
-						   			ON SCHEDULE EVERY 2 YEAR
-						   			STARTS CURRENT_TIMESTAMP + INTERVAL 2 YEAR;
 						   			END$$
 
 DELIMITER ;
